@@ -17,7 +17,7 @@ const PopulerMenu = () => {
             })
     }, [])
     return (
-        <section className="my-28">
+        <section className="max-w-[1320px] mx-auto my-28">
             <SectionTitles
                 subHeading={'Chef it out'}
                 heading={'from our menu'}

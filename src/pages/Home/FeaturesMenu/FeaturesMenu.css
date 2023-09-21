@@ -1,0 +1,11 @@
+.featureMenu {
+    background-image: url(../../../assets//home/featured.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.featureOverly {
+    background-color: rgba(0, 0, 0, 0.7);
+}

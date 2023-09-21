@@ -1,0 +1,6 @@
+.about-bg {
+    background-image: url(../../../assets/home/chef-service.jpg);
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+}

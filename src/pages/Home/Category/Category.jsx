@@ -12,11 +12,11 @@ import img4 from '../../../assets/home/slide4.jpg';
 import img5 from '../../../assets/home/slide5.jpg';
 const Category = () => {
     return (
-        <section>
+        <section className='max-w-[1320px] mx-auto'>
 
             <SectionTitles
                 subHeading={'From 11:00am To 10:00pm'}
-                heading={'order online' }
+                heading={'order online'}
             >
             </SectionTitles>
 
