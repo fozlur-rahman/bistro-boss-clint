@@ -22,10 +22,7 @@ const PopulerMenu = () => {
                 subHeading={'Chef it out'}
                 heading={'from our menu'}
             ></SectionTitles>
-
-
             {/* menu items  */}
-
             <div className=" lg:grid grid-cols-2 gap-6">
                 {
                     items.map(item => <MenuItem
