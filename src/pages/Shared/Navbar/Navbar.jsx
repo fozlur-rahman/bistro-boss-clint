@@ -38,6 +38,9 @@ const Navbar = () => {
                                 <NavLink to='/login' >Login</NavLink>
                             )}
                         </li>
+                        {
+                            user ? <p className="flex items-center"><img src={user?.photoURL} alt="" /></p> : <></>
+                        }
                         <li>
                             <NavLink to='/dashboard'>
                                 <FaShoppingCart className="text-3xl relative" />
@@ -60,6 +63,9 @@ const Navbar = () => {
                             <NavLink to='/login' >Login</NavLink>
                         )}
                     </li>
+                    {
+                        user ? <img src={user?.photoURL} alt="" /> : <></>
+                    }
                     <li>
                         <NavLink to='/dashboard'>
                             <FaShoppingCart className="text-3xl relative" />
