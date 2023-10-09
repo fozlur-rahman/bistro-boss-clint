@@ -1,0 +1,20 @@
+.active {
+    background: none !important;
+    border-bottom: 2px solid orange;
+    color: orange !important;
+    border-radius: 0;
+}
+
+a {
+    margin-left: 20px;
+    padding: 10px 0 !important;
+}
+
+a:hover {
+    background: none !important;
+    border-bottom: 2px solid orange;
+    border-radius: 0;
+    transition: .5s;
+    color: white !important;
+
+}

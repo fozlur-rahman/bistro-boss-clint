@@ -6,9 +6,15 @@ import Main from "../Layout/Main/Main";
 import Home from "../pages/Home/Home/Home";
 import Menu from "../pages/Menu/Menu/Menu";
 import Order from "../pages/Order/Order/Order";
-import Login from "../pages/Login/Login";
 import SignUp from "../pages/Login/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import Login from "../pages/Login/Login/Login";
+import Dashboard from "../Layout/Dashboard/Dashboard";
+// import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import Reservation from "../pages/Dashboard/Reservation/Reservation";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
+import AllUsers from "../pages/Dashboard/AllUses/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -41,5 +47,28 @@ export const router = createBrowserRouter([
             }
         ]
     },
+
+    // new layout (dashboard layout)
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+            {
+                path: 'userhome',
+                element: <UserHome></UserHome>
+            },
+            {
+                path: 'reservation',
+                element: <Reservation></Reservation>
+            },
+            {
+                path: 'mycart',
+                element: <MyCart></MyCart>
+            }, {
+                path: 'allusers',
+                element: <AllUsers></AllUsers>
+            }
+        ]
+    }
 ]);
 

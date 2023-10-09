@@ -11,7 +11,6 @@ const PopulerMenu = () => {
         fetch('menu.json')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 const populerMenu = data.filter(item => item.category === "popular");
                 setItems(populerMenu);
             })

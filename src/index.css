@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.drawer-side a.active {
+    color: white !important;
+    transition: .5s;
+}
+
+a.active {
+    color: white !important;
+    transition: .5s;
+}
+
+.drawer-side a {
+    background: transparent !important;
+}
