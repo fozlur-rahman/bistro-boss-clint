@@ -1,22 +1,21 @@
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation } from "react-router";
 import { useAuth } from "../hooks/useAuth";
-
 
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
     const location = useLocation();
     if (loading) {
-        return <span className="loading loading-dots loading-xs"></span>
-    }
-    if (user) {
-        return children;
-    }
-    else {
-        return (
-            <Navigate to='/login' state={{ from: location }} replace></Navigate>
-        );
+        // While loading, show a loading indicator or a message
+        return <p>Loading...</p>;
     }
 
+    if (!user) {
+        // If there is no user, redirect to the login page
+        return <Navigate to="/login" state={{ from: location }} replace />;
+    }
+
+    // If there is a user, render the protected content
+    return children;
 };
 
 export default PrivateRoute;

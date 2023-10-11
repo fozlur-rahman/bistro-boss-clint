@@ -39,7 +39,7 @@ const Navbar = () => {
                             )}
                         </li>
                         {
-                            user ? <p className="flex items-center"><img src={user?.photoURL} alt="" /></p> : <></>
+                            user ? <p className="flex items-center">{user?.email}</p> : <></>
                         }
                         <li>
                             <NavLink to='/dashboard'>
@@ -64,7 +64,7 @@ const Navbar = () => {
                         )}
                     </li>
                     {
-                        user ? <img src={user?.photoURL} alt="" /> : <></>
+                        user ? <p className="flex items-center pb-2">{user?.email}</p> : <></>
                     }
                     <li>
                         <NavLink to='/dashboard'>

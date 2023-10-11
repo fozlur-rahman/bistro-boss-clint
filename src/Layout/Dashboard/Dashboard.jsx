@@ -26,12 +26,12 @@ const Dashboard = () => {
                 <ul className="menu p-4 w-80 min-h-full bg-yellow-600 text-base-content">
                     {/* Sidebar content here */}
                     {
-                        isAdmin && isAdmin.role == 'admin' ? <p>admin</p> : <p>not an admin</p>
+                        isAdmin ? <p>admin</p> : <p>not an admin</p>
                     }
                     {
                         isAdmin ? <>
                             <li> <NavLink to='/dashboard/userhome'><FaHome></FaHome>Admin Home</NavLink></li>
-                            <li> <NavLink to='/dashboard/reservation'> <FaUtensils></FaUtensils> Add Items</NavLink></li>
+                            <li> <NavLink to='/dashboard/addItem'> <FaUtensils></FaUtensils> Add Items</NavLink></li>
                             {/* <li> <NavLink to='/dashboard/history'><FaWallet></FaWallet>History </NavLink></li> */}
                             <li>  <NavLink to='/dashboard/mycart'><FaBook></FaBook> Manage Items</NavLink></li>
                             <li>  <NavLink to='/dashboard/mycart'><FaBook></FaBook> Manage Booking</NavLink></li>
