@@ -4,9 +4,11 @@ import { authContext } from "../../../AuthProvider/AuthProvider";
 import { FaShoppingCart } from 'react-icons/fa';
 import useCart from "../../../hooks/useCart";
 import './Navbar.css';
+import useAdmin from "../../../hooks/useAdmin";
 
 const Navbar = () => {
     const { user, logOut } = useContext(authContext);
+    const [isAdmin] = useAdmin();
     const navigate = useNavigate();
     const [cart] = useCart();
 
@@ -42,7 +44,7 @@ const Navbar = () => {
                             user ? <p className="flex items-center">{user?.email}</p> : <></>
                         }
                         <li>
-                            <NavLink to='/dashboard'>
+                            <NavLink to={isAdmin ? '/dashboard/admin-home' : '/dashboard/user-home'}>
                                 <FaShoppingCart className="text-3xl relative" />
                                 <p className="absolute top-0 right-0 text-red-600">+{cart?.length || 0}</p>
                             </NavLink>
@@ -67,7 +69,7 @@ const Navbar = () => {
                         user ? <p className="flex items-center pb-2">{user?.email}</p> : <></>
                     }
                     <li>
-                        <NavLink to='/dashboard'>
+                        <NavLink to={isAdmin ? '/dashboard/admin-home' : '/dashboard/user-home'}>
                             <FaShoppingCart className="text-3xl relative" />
                             <p className="absolute top-0 right-0 text-red-600">+{cart?.length || 0}</p>
                         </NavLink>
