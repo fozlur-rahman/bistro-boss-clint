@@ -32,7 +32,6 @@ const AllUsers = () => {
     }
     // handle user delete 
     const handleUserDlete = (user) => {
-
         fetch(`http://localhost:5000/users/${user._id}`, {
             method: 'DELETE',
         })

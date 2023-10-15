@@ -61,6 +61,7 @@ const AddItem = () => {
         <div>
             <SectionTitles subHeading={'Add new'} heading={'add item'}></SectionTitles>
 
+
             <div className="w-2/3 mx-auto shadow  p-10">
 
                 <form onSubmit={handleSubmit(onSubmit)} className=" mx-auto space-y-4" action="">

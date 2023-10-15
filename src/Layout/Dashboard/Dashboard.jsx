@@ -30,10 +30,10 @@ const Dashboard = () => {
                     }
                     {
                         isAdmin ? <>
-                            <li> <NavLink to='/dashboard/userhome'><FaHome></FaHome>Admin Home</NavLink></li>
+                            <li> <NavLink to='/dashboard/'><FaHome></FaHome>Admin Home</NavLink></li>
                             <li> <NavLink to='/dashboard/addItem'> <FaUtensils></FaUtensils> Add Items</NavLink></li>
                             {/* <li> <NavLink to='/dashboard/history'><FaWallet></FaWallet>History </NavLink></li> */}
-                            <li>  <NavLink to='/dashboard/mycart'><FaBook></FaBook> Manage Items</NavLink></li>
+                            <li>  <NavLink to='/dashboard/manageItems'><FaBook></FaBook> Manage Items</NavLink></li>
                             <li>  <NavLink to='/dashboard/mycart'><FaBook></FaBook> Manage Booking</NavLink></li>
                             <li>  <NavLink to='/dashboard/allusers'><FaBook></FaBook> All Users</NavLink></li>
                             <div className="divider"></div>
@@ -47,7 +47,7 @@ const Dashboard = () => {
                             <>
                                 <li> <NavLink to='/dashboard/userhome'><FaHome></FaHome>User Home</NavLink></li>
                                 <li> <NavLink to='/dashboard/reservation'><FaCalendar></FaCalendar>Reservation</NavLink></li>
-                                <li> <NavLink to='/dashboard/history'><FaWallet></FaWallet>Payment History </NavLink></li>
+                                <li> <NavLink to='/dashboard/payment-history'><FaWallet></FaWallet>Payment History </NavLink></li>
                                 <li>  <NavLink to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart</NavLink></li>
                                 <div className="divider"></div>
                                 <Link to='/'>back to home</Link>
